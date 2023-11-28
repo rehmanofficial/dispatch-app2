@@ -338,7 +338,7 @@
                       </div>
                     </div>
                     <div class="mt-2 ti-dropdown-divider">
-                      <a href="#" class="ti-dropdown-item">
+                      <a href="{{ route('profile.edit') }}" class="ti-dropdown-item">
                         <i class="ti ti-user-circle text-lg"></i>
                         Profile
                       </a>

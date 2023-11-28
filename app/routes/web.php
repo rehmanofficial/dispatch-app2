@@ -1,10 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoadController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\LoadController;
+use App\Http\Controllers\UserProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,6 @@ Route::resources([
     'users' => UserController::class,
     'loads' => LoadController::class,
 ]);
+
+Route::get('/profile/edit', [UserProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/update', [UserProfileController::class, 'update'])->name('profile.update');
